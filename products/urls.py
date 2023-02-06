@@ -3,6 +3,6 @@ from products import views
 from django.template.backends.django import DjangoTemplates
 
 urlpatterns = [
-    path("products", views.productsHandler),
+    path('', views.productsHandler),
     path('product/<str:pk>', views.productHandler),
 ]

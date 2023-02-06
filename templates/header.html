@@ -1,0 +1,7 @@
+<h2>Logo</h2>
+<p>This is my {{ page }} page</p>
+{% if auth %}<p>{{auth.name}}</p>
+{% else %}
+<a href="#">Login</a>
+{% endif %}
+<hr/>
