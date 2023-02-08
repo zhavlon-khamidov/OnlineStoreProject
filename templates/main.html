@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %} - OnlineStore</title>
 
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+          }
+
+        tr:hover {
+            background-color: aqua;
+        }
+
+        tr:first-of-type{
+            background-color: inherit;
+        }
+    </style>
 </head>
 <body>
     {% include 'header.html' %}

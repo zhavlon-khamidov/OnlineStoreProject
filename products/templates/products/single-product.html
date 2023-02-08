@@ -1,8 +1,17 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<h1>Single product</h1>
-<p>{% lorem 5 b random %}</p>
+{% if product %}
+<h1>{{ product.title }}</h1>
+<p>Price: $ {{ product.price }}</p>
+
+<p>{{ product.description }}</p>
+{% else %}
+<h1>404 - Not found</h1>
+
+{% endif %}
+
+
 {% endblock %}
 
 {% block title %}Single Product{% endblock %}
