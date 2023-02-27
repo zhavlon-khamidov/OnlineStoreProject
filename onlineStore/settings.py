@@ -53,8 +53,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'onlineStore.urls'
 
-print("BASE_DIR:",str(BASE_DIR))
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

@@ -6,6 +6,7 @@ data = [
     {'id':2, 'title':'Banana', 'price': 2.0, 'description':'Test Descripion'},
     {'id':3, 'title':'Lemon', 'price': 3.0, 'description':'Test Descripion'},
     {'id':4, 'title':'Watermelon', 'price': 2.0, 'description':'Test Descripion'},    
+    {'id':5, 'title':'Strawberry', 'price': 5.0, 'description':'Test Descripion'},    
 ]
 
 def productsHandler(request):
