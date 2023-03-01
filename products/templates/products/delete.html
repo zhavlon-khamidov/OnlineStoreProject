@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form method="POST">
+    <p>Are you sure to remove the product: {{ product.title }}</p>
+
+    {% csrf_token %}
+    <input type="submit" value="Yes">
+    <a href="{% url 'product' product.id %}">
+        Cancel
+    </a>
+</form>
+{% endblock content %}
