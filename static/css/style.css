@@ -1,0 +1,47 @@
+* {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    color: #444444;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    all: unset;
+    cursor: pointer;
+}
+
+#logo {
+    vertical-align: middle;
+    height: 3em;
+}
+
+#logo + span {
+    font-size: 2em;
+    color: green;
+}
+
+nav > a {
+    all: unset;
+    border: 1px solid lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    background: lightblue;
+}
+
+nav > a:hover {
+    border-color: blue;
+    color: white;
+    background: blue;
+}
+
+nav > a:active {
+    color: red;
+    background: aqua;
+}
