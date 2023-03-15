@@ -1,8 +1,15 @@
-<h2>Logo</h2>
-<a href="{% url 'createProduct' %}">Add Product</a>
-<p>This is my {{ page }} page</p>
+{% load static %}
+<header>
+    <div>
+        <a href="{% url 'products' %}">
+        <img id="logo" src="{% static 'img/logo.svg' %}" alt="My logo">
+        <span>Online Store</span></a>
+    </div>
+<nav>
+    <a href="{% url 'createProduct' %}">Add Product</a>
 {% if auth %}<p>{{auth.name}}</p>
 {% else %}
 <a href="#">Login</a>
 {% endif %}
-<hr/>
+</nav>
+</header>
