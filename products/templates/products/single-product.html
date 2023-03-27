@@ -4,7 +4,7 @@
 {% if product %}
 <h1>{{ product.title }}</h1>
 <p>Price: $ {{ product.price }}</p>
-
+<div><img src="{{ product.featured_image.url }}" alt="Product photo"></div>
 <p>{{ product.description }}</p>
 
 

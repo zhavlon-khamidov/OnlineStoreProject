@@ -23,6 +23,7 @@ def createProduct(request : HttpRequest):
     print(request.method)
     
     if request.method == 'POST':
+        request.POST['featured_image']
         form = ProductForm(request.POST)
         if form.is_valid():
             form.save()
