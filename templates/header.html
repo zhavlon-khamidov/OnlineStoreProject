@@ -7,9 +7,11 @@
     </div>
 <nav>
     <a href="{% url 'createProduct' %}">Add Product</a>
+
 {% if auth %}<p>{{auth.name}}</p>
 {% else %}
-<a href="#">Login</a>
+<a href="{% url 'login' %}">Login</a>
 {% endif %}
+<a href="{% url 'logout' %}">Logout</a>
 </nav>
 </header>

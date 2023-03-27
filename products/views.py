@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from products.models import Product
 from .forms import ProductForm
+from django.contrib.auth.decorators import login_required
 
 # data = [
 #     {'id':1, 'title':'Apple','price':2.3, 'description':'Apple is from Kyrgyzstan'},
@@ -11,6 +12,7 @@ from .forms import ProductForm
 #     {'id':5, 'title':'Strawberry', 'price': 5.0, 'description':'Test Descripion'},    
 # ]
 
+@login_required(login_url='/login')
 def deleteProduct(request, pk):
     product = Product.objects.get(id=pk)
     if request.method == "POST":
@@ -18,6 +20,7 @@ def deleteProduct(request, pk):
         return redirect('products')
     return render(request, 'products/delete.html',{'product':product})
 
+@login_required(login_url='/login')
 def createProduct(request : HttpRequest):
     form = ProductForm()
     print(request.method)
@@ -30,6 +33,7 @@ def createProduct(request : HttpRequest):
     context = {"form": form}
     return render(request,'products/product-form.html',context)
 
+@login_required(login_url='/login')
 def editProduct(request : HttpRequest, pk):
     product = Product.objects.get(id=pk)
     form = ProductForm(instance=product)

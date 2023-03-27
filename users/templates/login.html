@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form > div {
+            padding: 0.5em;
+            margin: 0.5em;
+        }
+
+        input {
+            padding: 0.5em;
+            border-radius: .5em;
+            border: none;
+            outline: 2px solid lightblue;
+        }
+
+        button {
+            padding: .5em 2em;
+            color: white;
+            background-color: #23f2a0;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <div>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+    </form>
+</body>
+</html>
