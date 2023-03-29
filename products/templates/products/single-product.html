@@ -3,7 +3,7 @@
 {% block content %}
 {% if product %}
 <h1>{{ product.title }}</h1>
-<p>Price: $ {{ product.price }}</p>
+<p>Price: $ {{ product.price }}    Created date: {{ product.created|date:"d/m/Y" }}</p>
 <div><img src="{{ product.featured_image.url }}" alt="Product photo"></div>
 <p>{{ product.description }}</p>
 
