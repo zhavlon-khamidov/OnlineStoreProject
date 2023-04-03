@@ -14,6 +14,7 @@ class Product(models.Model):
                                  blank=True,
                                  on_delete=models.SET_NULL, default=None)
     tags = models.ManyToManyField("Tag", blank=True)
+    # edited = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, unique=True)
     
