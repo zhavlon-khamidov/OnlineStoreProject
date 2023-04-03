@@ -26,6 +26,8 @@ urlpatterns = [
     path('', include(products.urls)),
     path('login', users.views.login_user, name="login"),
     path('logout', users.views.logout_user, name="logout"),
+    path('reg', users.views.register_user, name="register"),
+
     
     
 ]

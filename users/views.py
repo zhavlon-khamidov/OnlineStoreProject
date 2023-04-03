@@ -11,8 +11,13 @@ def logout_user(request):
 
 def register_user(request):
     userForm = UserCreationForm()
+    if request.method == "POST":
+        userForm = UserCreationForm(request.POST)
+        if userForm.is_valid():
+            userForm.save()
+            return redirect('products')
     context = {"form": userForm}
-    render(request, "register.html", context)
+    return render(request, "register.html", context)
 
 def login_user(request: HttpRequest):
     if request.user.is_authenticated:
