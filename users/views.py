@@ -2,6 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm
 
 # Create your views here.
 def logout_user(request):
@@ -10,9 +11,9 @@ def logout_user(request):
 
 
 def register_user(request):
-    userForm = UserCreationForm()
+    userForm = CustomUserCreationForm()
     if request.method == "POST":
-        userForm = UserCreationForm(request.POST)
+        userForm = CustomUserCreationForm(request.POST)
         if userForm.is_valid():
             userForm.save()
             return redirect('products')
