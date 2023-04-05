@@ -112,3 +112,7 @@ label{
 input[name="csrfmiddlewaretoken"] {
     display: block;
 }
+
+.current {
+    color: green;
+}
